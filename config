@@ -1,0 +1,20 @@
+
+# Copyright (C) Ngwsx
+
+
+ngx_addon_name=ngx_tcp_module
+
+CORE_MODULES="$CORE_MODULES \
+    ngx_tcp_module \
+    ngx_tcp_core_module"
+
+CORE_INCS="$CORE_INCS \
+    $ngx_addon_dir/src"
+
+NGX_ADDON_DEPS="$NGX_ADDON_DEPS \
+    $ngx_addon_dir/src/ngx_tcp.h"
+
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS \
+    $ngx_addon_dir/src/ngx_tcp.c \
+    $ngx_addon_dir/src/ngx_tcp_core_module.c \
+    $ngx_addon_dir/src/ngx_tcp_handler.c"
